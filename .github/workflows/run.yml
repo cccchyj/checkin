@@ -1,10 +1,17 @@
 name: run
 
+# on:
+#   workflow_dispatch:
+#   push:
+#   schedule:
+#     - cron: 10 16 * * *
+
 on:
   workflow_dispatch:
   push:
   schedule:
-    - cron: 10 16 * * *
+    - cron: '0 20 * * *'
+      timezone: 'Asia/Tokyo'
 
 jobs:
   run:
